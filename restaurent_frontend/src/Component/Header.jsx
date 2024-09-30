@@ -1,7 +1,10 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import logo from "../assets/home/Logo.png"
 
-const Header = () => {
+const Header = ({ scrollToBooking }) => {
+
+  
+
   return (
     <header className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
  
@@ -18,7 +21,7 @@ const Header = () => {
 
 
     <div>
-      <button   className="bg-yellow-500 text-gray-900 py-2 px-4">
+      <button onClick={scrollToBooking}  className="bg-yellow-500 text-gray-900 py-2 px-4">
         Reservation
       </button>
     </div>

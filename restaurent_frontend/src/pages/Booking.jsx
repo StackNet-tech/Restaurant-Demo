@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef , forwardRef } from 'react';
 import axios from 'axios';
 
-function Booking() {
+const Booking = forwardRef((props, ref) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [person, setPerson] = useState(1);
@@ -28,8 +28,9 @@ function Booking() {
       });
   };
 
+  
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat" 
+    <div ref={ref} id="booking" className="relative flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat" 
       style={{ backgroundImage: `url('../src/assets/booking/Background.png')` }}>
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="relative z-10 max-w-xl w-full bg-gray-800 bg-opacity-70 p-8 rounded-lg text-center">
@@ -89,6 +90,6 @@ function Booking() {
       </div>
     </div>
   );
-}
+});
 
 export default Booking;
