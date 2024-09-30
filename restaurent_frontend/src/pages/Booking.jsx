@@ -30,9 +30,9 @@ function Booking() {
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat" 
-      style={{ backgroundImage: `url('/path-to-your-background-image.jpg')` }}>
+      style={{ backgroundImage: `url('../src/assets/booking/Background.png')` }}>
       <div className="absolute inset-0 bg-black opacity-60"></div>
-      <div className="relative z-10 max-w-xl w-full bg-white bg-opacity-80 p-8 rounded-lg text-center">
+      <div className="relative z-10 max-w-xl w-full bg-gray-800 bg-opacity-70 p-8 rounded-lg text-center">
         <h2 className="text-amber-500 text-lg mb-2">Reservation</h2>
         <h1 className="text-white text-3xl mb-8">Book Your Table Now</h1>
         <form onSubmit={handleSubmit}>
