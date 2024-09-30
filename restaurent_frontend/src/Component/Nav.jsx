@@ -17,7 +17,7 @@ const Navbar = () => {
           <a href="facilities" className="hover:text-yellow-500">
             Facilities
           </a>
-          <a href="accommodation" className="hover:text-yellow-500">
+          <a href="accomodation" className="hover:text-yellow-500">
             Accommodation
           </a>
           <a href="events" className="hover:text-yellow-500">
