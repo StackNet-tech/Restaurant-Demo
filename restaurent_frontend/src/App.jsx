@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import OurMenu from './pages/OurMenu';
 import Accomodation from './pages/Accomodation';
+import Events from './pages/Events';
 
 
 
@@ -19,6 +20,8 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path='menu' element={<OurMenu />} />
         <Route path='accomodation' element={<Accomodation />} />
+        <Route path='events' element={<Events />} />
+        
 
         
 
