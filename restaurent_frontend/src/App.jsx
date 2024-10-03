@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import OurMenu from './pages/OurMenu';
 import Accomodation from './pages/Accomodation';
 import Events from './pages/Events';
+import Facilities from './pages/Facilities';
 
 
 
@@ -21,7 +22,7 @@ const App = () => {
         <Route path='menu' element={<OurMenu />} />
         <Route path='accomodation' element={<Accomodation />} />
         <Route path='events' element={<Events />} />
-        
+        <Route path='facilities' element={<Facilities/>} />
 
         
 

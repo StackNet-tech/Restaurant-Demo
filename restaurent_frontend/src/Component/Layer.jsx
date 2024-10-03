@@ -8,13 +8,13 @@ import Booking from "../pages/Booking"
 
 export default function Layer() {
 
-    const bookingRef = useRef(null);
+  const bookingRef = useRef(null);
 
-    const scrollToBooking = () => {
-        if (bookingRef.current) {
-          bookingRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-      };
+  const scrollToBooking = () => {
+    if (bookingRef.current) {
+      bookingRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
     return (
         <>

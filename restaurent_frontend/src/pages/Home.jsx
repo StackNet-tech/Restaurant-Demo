@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import home from "../assets/home/image.png"
 
 const Home = () => {
@@ -17,7 +17,19 @@ const Home = () => {
       { id: 2, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (2).png' },
       { id: 3, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (3).png' },
       { id: 4, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (4).png' },
+      { id: 5, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (1).png' },
+      { id: 6, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (2).png' },
+      { id: 7, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (3).png' },
+      { id: 8, name: 'Chicken Manjori', price: '\$15', description: 'Lorem Ipsum is that it has a more-or-less normal', image: '../src/assets/home/Image (4).png' },
+    
     ];
+
+    const [visibleMenusCount, setVisibleMenusCount] = useState(4);
+
+    const showMoremenu = () => {
+      setVisibleMenusCount((prevCount) => prevCount + 4);
+    };
+
 
   return (
     <div>
@@ -56,7 +68,7 @@ const Home = () => {
       <h1 className="text-4xl font-bold mb-4">Explore Our Menu</h1>
       <p className="mb-8">Discover our delectable range of dishes prepared with fresh, high-quality ingredients</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {menuItems.map(item => (
+        {menuItems.slice(0, visibleMenusCount).map(item => (
           <div key={item.id} className="bg-white shadow-md rounded-lg overflow-hidden">
             <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
             <div className="p-4">
@@ -67,11 +79,16 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-8">
-        <button className="px-6 py-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition rounded">
+
+      {visibleMenusCount < menuItems.length && (
+        <div className="flex justify-center mt-8">
+        <button onClick={showMoremenu} className="px-6 py-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition rounded">
           View More
         </button>
       </div>
+        )}
+
+      
     </div>
       </div>
 
