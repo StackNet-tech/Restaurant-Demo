@@ -9,7 +9,7 @@ import OurMenu from './pages/OurMenu';
 import Accomodation from './pages/Accomodation';
 import Events from './pages/Events';
 import Facilities from './pages/Facilities';
-
+import About from './pages/About';
 
 
 const App = () => {
@@ -23,9 +23,7 @@ const App = () => {
         <Route path='accomodation' element={<Accomodation />} />
         <Route path='events' element={<Events />} />
         <Route path='facilities' element={<Facilities/>} />
-
-        
-
+        <Route path='about' element={<About/>} />
         </Route>
       </Routes>
     </BrowserRouter>
