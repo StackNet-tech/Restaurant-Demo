@@ -23,9 +23,9 @@ const Navbar = () => {
           <a href="events" className="hover:text-yellow-500">
             Events
           </a>
-          <a href="contact" className="hover:text-yellow-500">
+          {/* <a href="contact" className="hover:text-yellow-500">
             Contact
-          </a>
+          </a> */}
         </div>
       </nav>
     );
