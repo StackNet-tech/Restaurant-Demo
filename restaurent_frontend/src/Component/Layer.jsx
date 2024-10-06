@@ -5,6 +5,7 @@ import Footer from "../pages/Footer"
 import Navbar from "./Header"
 import Home from "../pages/Home"
 import Booking from "../pages/Booking"
+import About from "../pages/About"
 
 export default function Layer() {
 
